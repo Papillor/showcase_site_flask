@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/base.css" type="text/css"/>
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#">Logo</a></div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{ url_for('about')}}">About</a></li>
+                <li>
+                    <a href="#" class="desktop-item">Services</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Services</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <header>Fonctionnalités 1</header>
+                                <ul class="mega-links">
+                                    <li><a href="{{ url_for('service1')}}">Service 1</a></li>
+                                    <li><a href="{{ url_for('service2')}}">Service 2</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Fonctionnalités 2</header>
+                                <ul class="mega-links">
+                                    <li><a href="{{ url_for('service3')}}">Service 3</a></li>
+                                    <li><a href="{{ url_for('service4')}}">Service 4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="{{ url_for('contact')}}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+<main>
+    <div class="page_content">
+        {% block content %} {% endblock %}
+    </div>
+</main>
+</body>
+</html>
